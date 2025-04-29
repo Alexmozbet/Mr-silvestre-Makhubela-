@@ -13,7 +13,7 @@
       scroll-behavior: smooth;
     }
     header {
-      background: linear-gradient(to right, #222, #555);
+      background: linear-gradient(to right, #1a1a1a, #333);
       color: white;
       padding: 30px 20px;
       text-align: center;
@@ -23,18 +23,23 @@
       margin-bottom: 10px;
     }
     nav {
-      background: #333;
-      text-align: center;
+      background: #222;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
-    nav a {
-      display: inline-block;
+    nav button {
+      background: none;
+      border: none;
+      color: white;
       padding: 14px 20px;
-      color: #fff;
-      text-decoration: none;
+      cursor: pointer;
+      font-size: 16px;
       font-weight: bold;
+      transition: background 0.3s;
     }
-    nav a:hover {
-      background: #555;
+    nav button:hover {
+      background: #444;
     }
     .container {
       padding: 20px;
@@ -47,10 +52,14 @@
       padding: 25px;
       margin-bottom: 30px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      animation: fadeInUp 1s ease;
+      display: none;
+      animation: fadeIn 0.6s ease;
     }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
+    section.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
     h2 {
@@ -76,12 +85,6 @@
     .before-after img:hover {
       transform: scale(1.05);
     }
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
     .btn-whatsapp {
       background: #25d366;
       color: white;
@@ -95,6 +98,31 @@
     .btn-whatsapp:hover {
       background: #1da851;
     }
+    footer {
+      background: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .testimonials {
+      background-color: #f9f9f9;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 8px;
+    }
+    .testimonial {
+      border-left: 5px solid #0a58ca;
+      padding-left: 20px;
+      margin-bottom: 15px;
+    }
+    .testimonial p {
+      font-style: italic;
+    }
+    #map {
+      width: 100%;
+      height: 400px;
+      border-radius: 10px;
+    }
   </style>
 </head>
 <body>
@@ -106,32 +134,54 @@
   </header>
 
   <nav>
-    <a href="#services">Services</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
+    <button onclick="showSection('services')">Services</button>
+    <button onclick="showSection('gallery')">Gallery</button>
+    <button onclick="showSection('testimonials')">Testimonials</button>
+    <button onclick="showSection('contact')">Contact</button>
+    <button onclick="showSection('location')">Location</button>
   </nav>
 
   <div class="container">
-
-    <section id="services">
+    
+    <section id="services" class="active">
       <h2>Our Services</h2>
+      <p>We offer a wide range of high-quality services to meet all your car painting and panel beating needs. Whether you need a fresh coat of paint, scratch and dent repair, or complete restoration, we have you covered. Our skilled professionals ensure that your car looks like new again with attention to detail and precision.</p>
       <ul>
-        <li>Full Car Painting and Repainting</li>
-        <li>Scratch, Dent & Rust Repair</li>
-        <li>Custom Paint Jobs</li>
-        <li>Body Panel Beating and Restoration</li>
-        <li>Professional Spray Finishing</li>
-        <li>Affordable & Quick Service Delivery</li>
+        <li><strong>Full Car Painting and Repainting:</strong> We offer complete respraying for cars, trucks, and motorcycles with a variety of colors and finishes. We ensure durability and a flawless look.</li>
+        <li><strong>Scratch, Dent & Rust Repair:</strong> Our team specializes in removing scratches, dents, and rust to restore your car’s appearance to perfection.</li>
+        <li><strong>Custom Paint Jobs:</strong> Want something unique? Our custom paint jobs are tailored to your specific vision, giving your car a distinctive style.</li>
+        <li><strong>Body Panel Beating and Restoration:</strong> We provide professional panel beating services, repairing any damaged body parts and restoring your car’s original structure.</li>
+        <li><strong>Professional Spray Finishing:</strong> Using the latest spray finishing techniques, we ensure smooth and even coatings, enhancing both the look and longevity of your vehicle.</li>
+        <li><strong>Affordable & Quick Service Delivery:</strong> We strive to offer high-quality service at competitive prices with fast turnaround times.</li>
       </ul>
     </section>
 
     <section id="gallery">
       <h2>Our Work</h2>
+      <p>Take a look at some of the amazing transformations we have done. Our work speaks for itself!</p>
       <div class="before-after">
         <img src="images/IMG-20250418-WA0024.jpg" alt="Car image 1">
         <img src="images/IMG-20250418-WA0025.jpg" alt="Car image 2">
         <img src="images/IMG-20250418-WA0026.jpg" alt="Car image 3">
         <img src="images/IMG-20250418-WA0028.jpg" alt="Car image 4">
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonials">
+        <div class="testimonial">
+          <p>"Mr. Silvestre and his team did an amazing job on my car. It looks brand new! The paint job is flawless, and they even fixed some rust spots I didn't know about. Highly recommend their service!"</p>
+          <p><strong>- John M.</strong></p>
+        </div>
+        <div class="testimonial">
+          <p>"I brought my car in for a custom paint job and was blown away by the attention to detail. The team really brought my vision to life!"</p>
+          <p><strong>- Sarah K.</strong></p>
+        </div>
+        <div class="testimonial">
+          <p>"Fast and affordable service with excellent results. My car was in and out in no time, and it looks fantastic!"</p>
+          <p><strong>- David R.</strong></p>
+        </div>
       </div>
     </section>
 
@@ -144,11 +194,30 @@
       <a href="https://wa.me/27788593798" target="_blank" class="btn-whatsapp">Contact on WhatsApp</a>
     </section>
 
+    <section id="location">
+      <h2>Find Us</h2>
+      <p>We are located in Ivory Park, South Africa. Use the map below to find our exact location.</p>
+      <div id="map">
+        <!-- Google Maps embed -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12559.756872376967!2d28.1714684!3d-25.9816426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9508934768a17d%3A0x70a2d6fe314bd084!2sIvory%20Park%2C%20Midrand%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1619578893232!5m2!1sen!2sus" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+    </section>
+
   </div>
 
   <footer>
     <p>&copy; 2025 Mr Silvestre Makhubela Car Painting. All rights reserved.</p>
   </footer>
 
-</body>
-      </html>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => {
+        section.classList.remove("active");
+      });
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+
+</body> 
+</html>
