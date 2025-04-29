@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,47 +8,50 @@
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-      background: #f0f2f5;
-      color: #1a1a2e;
+      background: #f4f6fc;
+      color: #1b1c1e;
     }
     header {
-      background: #1a1a2e;
-      color: #f5b042;
-      padding: 30px 20px;
+      background: #003049;
+      color: #fcbf49;
+      padding: 40px 20px;
       text-align: center;
     }
-    header h1 {
-      margin: 0;
-      font-size: 32px;
+    header img {
+      height: 80px;
+      margin-bottom: 10px;
     }
     nav {
-      background: #16213e;
+      background: #264653;
       text-align: center;
     }
     nav a {
       display: inline-block;
-      padding: 14px 20px;
+      padding: 15px 25px;
       color: #fff;
       text-decoration: none;
       font-weight: 600;
     }
     nav a:hover {
-      background: #0f3460;
+      background: #2a9d8f;
     }
     .container {
       padding: 30px 20px;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
     }
-    .services, .contact {
+    section {
       background: white;
-      padding: 25px;
+      padding: 30px;
       border-radius: 12px;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-    .services h2 {
-      color: #f5b042;
+    section h2 {
+      color: #e76f51;
+    }
+    ul {
+      line-height: 1.8;
     }
     .gallery {
       display: flex;
@@ -63,63 +65,95 @@
       border-radius: 10px;
       box-shadow: 0 3px 8px rgba(0,0,0,0.15);
     }
+    .whatsapp-button {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    .social-icons {
+      margin-top: 15px;
+    }
+    .social-icons a {
+      display: inline-block;
+      margin: 0 10px;
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+    }
     footer {
-      background: #1a1a2e;
+      background: #003049;
       color: white;
       text-align: center;
       padding: 20px;
       margin-top: 40px;
     }
   </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-<body>
-
-  <header>
+<body>  <header>
+    <img src="images/logo.png" alt="Logo">
     <h1>Mr Silvestre Makhubela Car Painting</h1>
-    <p>Professional Car Painting & Panel Beating Services in Ivory Park</p>
-  </header>
-
-  <nav>
+    <p>Premium Car Painting, Panel Beating & Body Work in Ivory Park</p>
+  </header>  <nav>
     <a href="#services">Services</a>
     <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="#testimonials">Testimonials</a>
     <a href="#contact">Contact</a>
-  </nav>
+  </nav>  <div class="container"><section id="about">
+  <h2>About Us</h2>
+  <p>We are a dedicated car painting and panel beating company based in Ivory Park, South Africa. With years of experience in restoring, customizing and painting vehicles, we take pride in delivering top-notch results that bring your car back to life. We serve individuals, car dealerships, and commercial clients with integrity and unmatched quality.</p>
+</section>
 
-  <div class="container">
-    
-    <section id="services" class="services">
-      <h2>Our Services</h2>
-      <ul>
-        <li>Complete Car Painting</li>
-        <li>Scratch and Dent Repair</li>
-        <li>Spray Painting and Finishing</li>
-        <li>Custom Paint Designs</li>
-        <li><strong>Panel Beating (Body Repair)</strong></li>
-        <li>Rust Removal and Protection</li>
-      </ul>
-    </section>
+<section id="services">
+  <h2>Our Services</h2>
+  <ul>
+    <li>Full Car Spray Painting</li>
+    <li>Scratch, Dent and Collision Repair</li>
+    <li>Rust Removal and Protection</li>
+    <li>Body Panel Replacement and Welding</li>
+    <li>Paint Polishing & Detailing</li>
+    <li>Color Matching and Custom Paint Jobs</li>
+    <li>Insurance Claims Assistance</li>
+    <li>Mobile Quote Services</li>
+  </ul>
+</section>
 
-    <section id="gallery" class="services">
-      <h2>Our Work</h2>
-      <div class="gallery">
-        <img src="images/car1.jpg" alt="Car 1">
-        <img src="images/car2.jpg" alt="Car 2">
-        <img src="images/car3.jpg" alt="Car 3">
-        <img src="images/car4.jpg" alt="Car 4">
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <h2>Contact Us</h2>
-      <p><strong>Phone:</strong> +27 78 859 3798</p>
-      <p><strong>Email:</strong> info@mrcarpainting.co.za</p>
-      <p><strong>Location:</strong> Opportunity Street, Ivory Park, South Africa</p>
-    </section>
+<section id="gallery">
+  <h2>Our Work Gallery</h2>
+  <div class="gallery">
+    <img src="images/car1.jpg" alt="Work 1">
+    <img src="images/car2.jpg" alt="Work 2">
+    <img src="images/car3.jpg" alt="Work 3">
+    <img src="images/car4.jpg" alt="Work 4">
+    <img src="images/car5.jpg" alt="Work 5">
   </div>
+</section>
 
-  <footer>
+<section id="testimonials">
+  <h2>Customer Testimonials</h2>
+  <p><strong>Sarah M.</strong>: "I was blown away by the results! My car looks brand new. Highly recommend Mr. Makhubela!"</p>
+  <p><strong>Thabo L.</strong>: "Excellent service and fast turnaround. These guys know what they’re doing!"</p>
+  <p><strong>Nomsa Z.</strong>: "Affordable, professional, and friendly. I’m very happy with the quality of the work."</p>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p><strong>Phone:</strong> +27 78 859 3798</p>
+  <p><strong>Email:</strong> info@mrcarpainting.co.za</p>
+  <p><strong>Address:</strong> Opportunity Street, Ivory Park, South Africa</p>
+  <a class="whatsapp-button" href="https://wa.me/27788593798" target="_blank">Chat on WhatsApp</a>
+</section>
+
+  </div>  <footer>
     <p>&copy; 2025 Mr Silvestre Makhubela Car Painting. All rights reserved.</p>
-  </footer>
-
-</body>
-</html>
+    <div class="social-icons">
+      <a href="https://facebook.com/SilvestreMakhubela" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
+  </footer></body>
+  </html>
