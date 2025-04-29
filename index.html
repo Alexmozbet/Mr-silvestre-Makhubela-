@@ -4,57 +4,71 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mr Silvestre Makhubela Car Painting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      background: #f4f4f4;
+      background: #f0f2f5;
+      color: #1a1a2e;
     }
     header {
-      background: #333;
-      color: white;
-      padding: 20px;
+      background: #1a1a2e;
+      color: #f5b042;
+      padding: 30px 20px;
       text-align: center;
     }
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
     nav {
-      background: #444;
+      background: #16213e;
       text-align: center;
     }
     nav a {
       display: inline-block;
-      padding: 12px 20px;
-      color: white;
+      padding: 14px 20px;
+      color: #fff;
       text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      background: #0f3460;
     }
     .container {
-      padding: 20px;
+      padding: 30px 20px;
       max-width: 1000px;
       margin: auto;
     }
     .services, .contact {
       background: white;
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 20px;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-    .before-after {
+    .services h2 {
+      color: #f5b042;
+    }
+    .gallery {
       display: flex;
-      gap: 20px;
       flex-wrap: wrap;
+      gap: 15px;
       justify-content: center;
-      margin-bottom: 20px;
     }
-    .before-after img {
+    .gallery img {
       width: 100%;
-      max-width: 450px;
+      max-width: 300px;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
     }
     footer {
-      background: #333;
+      background: #1a1a2e;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -67,7 +81,7 @@
 
   <nav>
     <a href="#services">Services</a>
-    <a href="#gallery">Before & After</a>
+    <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -86,16 +100,12 @@
     </section>
 
     <section id="gallery" class="services">
-      <h2>Before & After</h2>
-      <div class="before-after">
-        <div>
-          <h3>Before</h3>
-          <img src="images/before.jpg" alt="Car before painting">
-        </div>
-        <div>
-          <h3>After</h3>
-          <img src="images/after.jpg" alt="Car after painting">
-        </div>
+      <h2>Our Work</h2>
+      <div class="gallery">
+        <img src="images/car1.jpg" alt="Car 1">
+        <img src="images/car2.jpg" alt="Car 2">
+        <img src="images/car3.jpg" alt="Car 3">
+        <img src="images/car4.jpg" alt="Car 4">
       </div>
     </section>
 
@@ -112,4 +122,4 @@
   </footer>
 
 </body>
-  </html>
+</html>
